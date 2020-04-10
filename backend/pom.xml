@@ -18,10 +18,10 @@
     </properties>
 
     <dependencies>
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -68,12 +68,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-        <!-- <dependency>
+        <dependency>
             <groupId>aces.af.mil</groupId>
             <artifactId>frontend</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
-        </dependency> -->
+        </dependency>
     </dependencies>
 
     <build>
@@ -112,10 +112,10 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/classes/resources/</outputDirectory>
+                            <outputDirectory>../backend/src/main/resources</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${project.parent.basedir}/fronted/src/dist</directory>
+                                    <directory>${project.parent.basedir}/frontend/dist/frontend</directory>
                                 </resource>
                             </resources>
                         </configuration>
