@@ -112,7 +112,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>../backend/src/main/resources</outputDirectory>
+                            <outputDirectory>../backend/src/main/resources/static</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${project.parent.basedir}/frontend/dist/frontend</directory>
