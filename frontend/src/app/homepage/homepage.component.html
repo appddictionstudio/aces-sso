@@ -3,10 +3,10 @@
     <mat-toolbar style="background-color: #bdc2c6">
         <mat-toolbar-row style="margin:5px;">
             <img alt="celogo" src="assets/celogo.jpg" style="width:64px;" />
-            <button mat-button>ACES</button>
-            <button mat-button>FESIMS</button>
-            <button mat-button>EODIMS</button>
-            <button mat-button>ARIS</button>
+            <button [disabled]="isDisabled" mat-button>ACES</button>
+            <button [disabled]="isDisabled" mat-button>FESIMS</button>
+            <button [disabled]="isDisabled" mat-button>EODIMS</button>
+            <button [disabled]="isDisabled" mat-button>ARIS</button>
         </mat-toolbar-row>
     </mat-toolbar>
     <div class="header">
