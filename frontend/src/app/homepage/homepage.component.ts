@@ -27,12 +27,17 @@ export class HomepageComponent implements OnInit {
   closeResult: any;
   disabledButtons: Subscription;
   isDisabled: boolean;
+  hyperlinkDisabled = 'disabledLink';
 
   ngOnInit() {
     this.open();
+    console.log(this.hyperlinkDisabled);
     this.disabledButtons = this.service.getActiveObservable().subscribe(res => {
       this.isDisabled = res;
-      console.log(this.isDisabled);
+      if (this.isDisabled === false) {
+        this.hyperlinkDisabled = 'enabledLink';
+      }
+      console.log(this.hyperlinkDisabled);
     });
     // this.getCert();
   }
