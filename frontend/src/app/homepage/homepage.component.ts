@@ -28,6 +28,9 @@ export class HomepageComponent implements OnInit {
   disabledButtons: Subscription;
   isDisabled: boolean;
   hyperlinkDisabled = 'disabledLink';
+  acesApps = [
+    'ACES', 'FESIMS', 'EODIMS', 'ARIS'
+  ];
 
   ngOnInit() {
     this.open();

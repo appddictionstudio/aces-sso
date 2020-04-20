@@ -22,33 +22,30 @@
     </div>
     <div class="portalgrid">
         <div class="column1">
-            <mat-accordion>
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Links
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div>
-                        <p><a [ngClass]="hyperlinkDisabled"
-                                href="https://cs2.eis.af.mil/sites/10041/pages/default.aspx">US Air Force Civil
-                                Engineer</a>
-                        </p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="https://cs2.eis.af.mil/sites/13072/default.aspx">AFCEC Expeditionary Engineering</a>
-                        </p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="">Release Notes/SANS (AFCEDS)</a></p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="">AF Fire Emergency Services SharePoint</a></p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="">ARIS SharePoint</a></p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="">Accessibility/Section 508</a></p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="">AFCEC SharePoint</a></p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="">EODIMS CBT (JKO account required)</a></p>
-                        <p><a [ngClass]="hyperlinkDisabled" href="">AEFOnline</a></p>
-                    </div>
-                </mat-expansion-panel>
-            </mat-accordion>
+            <mat-card>
+                <!-- <mat-accordion> -->
+                <!-- <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"> -->
+                <!-- <mat-expansion-panel-header> -->
+                <!-- <mat-panel-title> -->
+                <h3>Links</h3>
+                <!-- </mat-panel-title> -->
+                <!-- <mat-panel-description> -->
+                <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+                <!-- </mat-panel-description> -->
+                <!-- </mat-expansion-panel-header> -->
+                <p><a href="https://cs2.eis.af.mil/sites/10041/pages/default.aspx">US Air Force Civil Engineer</a>
+                </p>
+                <p><a href="https://cs2.eis.af.mil/sites/13072/default.aspx">AFCEC Expeditionary Engineering</a></p>
+                <p><a href="">Release Notes/SANS (AFCEDS)</a></p>
+                <p><a href="">AF Fire Emergency Services SharePoint</a></p>
+                <p><a href="">ARIS SharePoint</a></p>
+                <p><a href="">Accessibility/Section 508</a></p>
+                <p><a href="">AFCEC SharePoint</a></p>
+                <p><a href="">EODIMS CBT (JKO account required)</a></p>
+                <p><a href="">AEFOnline</a></p>
+                <!-- </mat-expansion-panel> -->
+                <!-- </mat-accordion> -->
+            </mat-card>
         </div>
         <div class="maininfo">
             <h2>Site UID and RPUID Processing</h2>
@@ -95,7 +92,8 @@
                 <p>EODIMS v2.1</p>
                 <p><strong>Notes</strong></p>
                 <p>
-                    <a [ngClass]="hyperlinkDisabled" href="https://acesb.cie.af.mil/documentation/SDC_Settings_Document_JAN2017.pdf">Standard Desktop
+                    <a [ngClass]="hyperlinkDisabled"
+                        href="https://acesb.cie.af.mil/documentation/SDC_Settings_Document_JAN2017.pdf">Standard Desktop
                         Configuration Settings</a>
                 </p>
                 <p><strong>User help Desk</strong></p>
