@@ -27,10 +27,14 @@
 
 .portalgrid 
     display: grid
+    display: -ms-grid
     grid-template-rows: 1fr
+    -ms-grid-rows: 1fr
     grid-template-columns: .5fr 1fr .5fr
+    -ms-grid-columns: .5fr 1fr .5fr
     padding-top: 30px
     grid-column-gap: 30px
+    grid-gap: 30px
 
 .widgets
     transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)
@@ -43,6 +47,8 @@
 
 .maininfo 
     grid-column: 2
+    -ms-grid-column: 2
+    margin: auto 20px
 
 .maininfo p
     font-size: 2vh !important
@@ -54,10 +60,12 @@
 
 .information-sidetab 
     grid-column: 3
+    -ms-grid-column: 3
 
 
 .column1 
     grid-column: 1
+    -ms-grid-column: 1
 
 .disabledLink
     pointer-events: none
