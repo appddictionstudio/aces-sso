@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NgbModalConfig, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { HomepageComponent } from '../homepage/homepage.component';
+// import { HomepageComponent } from '../homepage/homepage.component';
 // import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { PopupService } from '../service/popup.service';
 
@@ -17,7 +17,7 @@ export class PopupComponent implements OnInit {
     // public dialogRef: MatDialogRef<PopupComponent>,
     private modalService: NgbModal,
     private popupService: PopupService,
-    private  home: HomepageComponent,
+    // private  home: HomepageComponent,
   ) { }
 
   ngOnInit(): void {
