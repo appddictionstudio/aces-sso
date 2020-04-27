@@ -1,5 +1,5 @@
 <!-- <div style="background-color: #324359;; height:fit-content"> -->
-<div style="background-color: #f6f7f8;; height:fit-content; padding-bottom: 5%;">
+<div *ngIf="!isDisabled" class="mainBody" style="background-color: #f6f7f8;; height:fit-content; padding-bottom: 5%;overflow-x: hidden;">
     <mat-toolbar style="background-color: #bdc2c6">
         <mat-toolbar-row style="margin:5px;">
             <img alt="celogo" src="assets/celogo.jpg" style="width:64px;" />
@@ -92,7 +92,7 @@
                 <p>EODIMS v2.1</p>
                 <p><strong>Notes</strong></p>
                 <p>
-                    <a [ngClass]="hyperlinkDisabled"
+                    <a
                         href="https://acesb.cie.af.mil/documentation/SDC_Settings_Document_JAN2017.pdf">Standard Desktop
                         Configuration Settings</a>
                 </p>
@@ -102,7 +102,7 @@
                 <p>Comm: 334-416-5771</p>
                 <p>Toll Free: 877-596-5771</p>
                 <p>Use options 1,1,4</p>
-                <p><a [ngClass]="hyperlinkDisabled" href="HIZGH.FAS.Team1@us.af.mil">FAS Email</a></p>
+                <p><a href="HIZGH.FAS.Team1@us.af.mil">FAS Email</a></p>
             </mat-card>
         </div>
     </div>
