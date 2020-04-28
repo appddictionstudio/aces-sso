@@ -7,6 +7,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MatMenuModule} from '@angular/material/menu';
 
 // Angular Materials
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -29,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
     NgbModule,
     MatExpansionModule,
     MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

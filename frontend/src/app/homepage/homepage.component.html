@@ -1,12 +1,29 @@
 <!-- <div style="background-color: #324359;; height:fit-content"> -->
 <div *ngIf="!isDisabled" class="mainBody" style="background-color: #f6f7f8;; height:fit-content; padding-bottom: 5%;overflow-x: hidden;">
-    <mat-toolbar style="background-color: #bdc2c6">
+    <mat-toolbar style="background-color: #bdc2c6b6">
         <mat-toolbar-row style="margin:5px;">
             <img alt="celogo" src="assets/celogo.jpg" style="width:64px;" />
-            <button [disabled]="isDisabled" mat-button>ACES</button>
-            <button [disabled]="isDisabled" mat-button>FESIMS</button>
-            <button [disabled]="isDisabled" mat-button>EODIMS</button>
-            <button [disabled]="isDisabled" mat-button>ARIS</button>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="menu">ACES</button>
+            <mat-menu class="customize" #menu="matMenu">
+                <button mat-menu-item>Release Notes/SANS</button>
+                <button mat-menu-item>AEFOnline</button>
+                <button mat-menu-item>Accessibility/Section 508</button>
+                <button mat-menu-item>US Air Force Civil Engineer</button>
+                <button mat-menu-item>AFCEC Expeditionary Engineering</button>
+                <button mat-menu-item>AFCEC SharePoint</button>
+                </mat-menu>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="FESIMS">FESIMS</button>
+            <mat-menu #FESIMS="matMenu">
+                <button mat-menu-item>Services SharePoint</button>
+                </mat-menu>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="EODIMS">EODIMS</button>
+            <mat-menu #EODIMS="matMenu">
+                <button mat-menu-item>EODIMS CBT</button>
+                </mat-menu>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="ARIS">ARIS</button>
+            <mat-menu #ARIS="matMenu">
+                <button mat-menu-item>ARIS SharePoint</button>
+                </mat-menu>    
         </mat-toolbar-row>
     </mat-toolbar>
     <div class="header">
