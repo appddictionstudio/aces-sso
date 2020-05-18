@@ -1,16 +1,33 @@
 <!-- <div style="background-color: #324359;; height:fit-content"> -->
-<div style="background-color: #f6f7f8;; height:fit-content; padding-bottom: 5%;">
-    <mat-toolbar style="background-color: #bdc2c6">
+<div *ngIf="!isDisabled" class="mainBody" style="background-color: #f6f7f8;; height:fit-content; padding-bottom: 5%;overflow-x: hidden;">
+    <mat-toolbar style="background-color: #bdc2c6b6">
         <mat-toolbar-row style="margin:5px;">
             <img alt="celogo" src="assets/celogo.jpg" style="width:64px;" />
-            <button mat-button>ACES</button>
-            <button mat-button>FESIMS</button>
-            <button mat-button>EODIMS</button>
-            <button mat-button>ARIS</button>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="menu">ACES</button>
+            <mat-menu class="customize" #menu="matMenu">
+                <button mat-menu-item>Release Notes/SANS</button>
+                <button mat-menu-item>AEFOnline</button>
+                <button mat-menu-item>Accessibility/Section 508</button>
+                <button mat-menu-item>US Air Force Civil Engineer</button>
+                <button mat-menu-item>AFCEC Expeditionary Engineering</button>
+                <button mat-menu-item>AFCEC SharePoint</button>
+                </mat-menu>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="FESIMS">FESIMS</button>
+            <mat-menu #FESIMS="matMenu">
+                <button mat-menu-item>Services SharePoint</button>
+                </mat-menu>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="EODIMS">EODIMS</button>
+            <mat-menu #EODIMS="matMenu">
+                <button mat-menu-item>EODIMS CBT</button>
+                </mat-menu>
+            <button [disabled]="isDisabled" mat-button [matMenuTriggerFor]="ARIS">ARIS</button>
+            <mat-menu #ARIS="matMenu">
+                <button mat-menu-item>ARIS SharePoint</button>
+                </mat-menu>    
         </mat-toolbar-row>
     </mat-toolbar>
     <div class="header">
-        <div style="min-height: 50vh;
+        <div style="min-height: 25vh;
                 background: linear-gradient( rgba(0, 94, 255, 0.45), rgba(14, 30, 49, 0.45) ), url(assets/background.jpg);
                 background-position: center;
                 background-repeat: no-repeat;
@@ -22,33 +39,35 @@
     </div>
     <div class="portalgrid">
         <div class="column1">
-            <mat-accordion>
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title>
-                            Links
-                        </mat-panel-title>
-                        <mat-panel-description>
-                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <p><a href="https://cs2.eis.af.mil/sites/10041/pages/default.aspx">US Air Force Civil Engineer</a>
-                    </p>
-                    <p><a href="https://cs2.eis.af.mil/sites/13072/default.aspx">AFCEC Expeditionary Engineering</a></p>
-                    <p><a href="">Release Notes/SANS (AFCEDS)</a></p>
-                    <p><a href="">AF Fire Emergency Services SharePoint</a></p>
-                    <p><a href="">ARIS SharePoint</a></p>
-                    <p><a href="">Accessibility/Section 508</a></p>
-                    <p><a href="">AFCEC SharePoint</a></p>
-                    <p><a href="">EODIMS CBT (JKO account required)</a></p>
-                    <p><a href="">AEFOnline</a></p>
-                </mat-expansion-panel>
-            </mat-accordion>
+            <mat-card>
+                <!-- <mat-accordion> -->
+                <!-- <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"> -->
+                <!-- <mat-expansion-panel-header> -->
+                <!-- <mat-panel-title> -->
+                <h3>Links</h3>
+                <!-- </mat-panel-title> -->
+                <!-- <mat-panel-description> -->
+                <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+                <!-- </mat-panel-description> -->
+                <!-- </mat-expansion-panel-header> -->
+                <p><a href="https://cs2.eis.af.mil/sites/10041/pages/default.aspx">US Air Force Civil Engineer</a>
+                </p>
+                <p><a href="https://cs2.eis.af.mil/sites/13072/default.aspx">AFCEC Expeditionary Engineering</a></p>
+                <p><a href="">Release Notes/SANS (AFCEDS)</a></p>
+                <p><a href="">AF Fire Emergency Services SharePoint</a></p>
+                <p><a href="">ARIS SharePoint</a></p>
+                <p><a href="">Accessibility/Section 508</a></p>
+                <p><a href="">AFCEC SharePoint</a></p>
+                <p><a href="">EODIMS CBT (JKO account required)</a></p>
+                <p><a href="">AEFOnline</a></p>
+                <!-- </mat-expansion-panel> -->
+                <!-- </mat-accordion> -->
+            </mat-card>
         </div>
         <div class="maininfo">
             <h2>Site UID and RPUID Processing</h2>
-            <mat-card style="top: 8%; margin: 0 auto; width: auto">
-                <p>The OSD DAIS system that generates Site UIDs and fadltty
+            <mat-card style="margin: 0 auto; width: auto">
+                <p>The OSD DAIS system that generates Site UIDs and facility
                     RPUIDs has been down for several weeks. At this time there is no
                     projected date for the system to resume operation. Furthermore,
                     when the system resumes operation, it may still not support the
@@ -77,7 +96,7 @@
                     this has and is continuing to create, but please understand that we
                     do not control the DAIS interface; however, until further notice,
                     please refrain from submitting help desk tickets for missing Site UID
-                    or RPUIID errors.</p>
+                    or RPUID errors.</p>
             </mat-card>
         </div>
         <div class="information-sidetab">
@@ -90,7 +109,8 @@
                 <p>EODIMS v2.1</p>
                 <p><strong>Notes</strong></p>
                 <p>
-                    <a href="https://acesb.cie.af.mil/documentation/SDC_Settings_Document_JAN2017.pdf">Standard Desktop
+                    <a
+                        href="https://acesb.cie.af.mil/documentation/SDC_Settings_Document_JAN2017.pdf">Standard Desktop
                         Configuration Settings</a>
                 </p>
                 <p><strong>User help Desk</strong></p>
