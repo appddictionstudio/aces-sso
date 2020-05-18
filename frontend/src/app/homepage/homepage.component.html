@@ -1,4 +1,5 @@
-<div style="background-color: #324359; height:100vh;">
+<!-- <div style="background-color: #324359;; height:fit-content"> -->
+<div style="background-color: #f6f7f8;; height:fit-content; padding-bottom: 5%;">
     <mat-toolbar style="background-color: #bdc2c6">
         <mat-toolbar-row style="margin:5px;">
             <img alt="celogo" src="assets/celogo.jpg" style="width:64px;" />
@@ -8,13 +9,98 @@
             <button mat-button>ARIS</button>
         </mat-toolbar-row>
     </mat-toolbar>
-    <div style="min-height: 50vh;
-    background: linear-gradient( rgba(0, 94, 255, 0.45), rgba(14, 30, 49, 0.45) ), url(assets/background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;">
-        <h2 style="font-size: 27px;
-    color: white;
-    padding: 25px;">Automated Civil Engineer - Family of Systems</h2>
+    <div class="header">
+        <div style="min-height: 50vh;
+                background: linear-gradient( rgba(0, 94, 255, 0.45), rgba(14, 30, 49, 0.45) ), url(assets/background.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;">
+            <h2 style="font-size: 27px;
+                color: white;
+                padding: 25px;">Automated Civil Engineer - Family of Systems</h2>
+        </div>
+    </div>
+    <div class="portalgrid">
+        <div class="column1">
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Links
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p><a href="https://cs2.eis.af.mil/sites/10041/pages/default.aspx">US Air Force Civil Engineer</a>
+                    </p>
+                    <p><a href="https://cs2.eis.af.mil/sites/13072/default.aspx">AFCEC Expeditionary Engineering</a></p>
+                    <p><a href="">Release Notes/SANS (AFCEDS)</a></p>
+                    <p><a href="">AF Fire Emergency Services SharePoint</a></p>
+                    <p><a href="">ARIS SharePoint</a></p>
+                    <p><a href="">Accessibility/Section 508</a></p>
+                    <p><a href="">AFCEC SharePoint</a></p>
+                    <p><a href="">EODIMS CBT (JKO account required)</a></p>
+                    <p><a href="">AEFOnline</a></p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        <div class="maininfo">
+            <h2>Site UID and RPUID Processing</h2>
+            <mat-card style="top: 8%; margin: 0 auto; width: auto">
+                <p>The OSD DAIS system that generates Site UIDs and fadltty
+                    RPUIDs has been down for several weeks. At this time there is no
+                    projected date for the system to resume operation. Furthermore,
+                    when the system resumes operation, it may still not support the
+                    generation of Site UIDs and RPUIDs for ACES-RP.
+                </p>
+                <p>
+                    The ACES help desk is aware of this situation, but are unable to
+                    provide a way forward at this time. Please refrain from calling, e-
+                    mailing or submitting help desk tickets to the FAS help desk for
+                    missing/unassigned Site UID and RPUID errors as that will simply
+                    cause delays in processing help requests that can be resolved. This
+                    outage does not affect the way ACES-RP operates for those sites
+                    that have already been issued Site UIDs and RPUIDs.
+                </p>
+                <p>
+                    Those facilities awaiting RPUIDs are currently in the queue and will
+                    be processed as soon as DAIS interface is operational and AF
+                    business processes are in place. At that time the backlog of
+                    requests will be resubmitted and Site UID and/or RPUID requests
+                    will be assigned through ACES as appropriate. As soon as we
+                    receive notification that DAIS is operational for ACES-RP
+                    submission, you will be notified.
+                </p>
+                <p>
+                    AFCEC and the ACES-RP team are painfully aware of the backlog
+                    this has and is continuing to create, but please understand that we
+                    do not control the DAIS interface; however, until further notice,
+                    please refrain from submitting help desk tickets for missing Site UID
+                    or RPUIID errors.</p>
+            </mat-card>
+        </div>
+        <div class="information-sidetab">
+            <mat-card>
+                <h2>Information</h2>
+                <p><strong>Current Versions</strong></p>
+                <p>ACES v3.2.1.2</p>
+                <p>CES FD v3.0.2</p>
+                <p>ACES FD Dispatch b1178</p>
+                <p>EODIMS v2.1</p>
+                <p><strong>Notes</strong></p>
+                <p>
+                    <a href="https://acesb.cie.af.mil/documentation/SDC_Settings_Document_JAN2017.pdf">Standard Desktop
+                        Configuration Settings</a>
+                </p>
+                <p><strong>User help Desk</strong></p>
+                <p>Field Assistance Service</p>
+                <p>DSN: 312-596-5771</p>
+                <p>Comm: 334-416-5771</p>
+                <p>Toll Free: 877-596-5771</p>
+                <p>Use options 1,1,4</p>
+                <p><a href="HIZGH.FAS.Team1@us.af.mil">FAS Email</a></p>
+            </mat-card>
+        </div>
     </div>
 </div>

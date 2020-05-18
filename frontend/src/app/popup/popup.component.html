@@ -1,0 +1,120 @@
+<div>
+    <div *ngIf="!userAgreement" class="modal-header">
+        <h1>You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use
+            only.</h1>
+    </div>
+    <div *ngIf="!userAgreement" class="modal-body">
+        <h1>By using this IS (which includes any device attached to this IS), you consent to the following conditions:
+        </h1>
+        <ul>
+            <li>The USG routinely intercepts and monitors communications on this IS for purposes including, but not
+                limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct
+                (PM), law enforcement (LE), and counterintelligence (CI) investigations.</li>
+
+            <li>At any time, the USG may inspect and seize data stored on this IS.</li>
+
+            <li>Communications using, or data stored on, this IS are not private, are subject to routine monitoring,
+                interception, and search, and may be disclosed or used for any USG authorized purpose.</li>
+
+            <li>This IS includes security measures (e.g., authentication and access controls) to protect USG
+                interests-not for your personal benefit or privacy.</li>
+
+            <li>Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative
+                searching or monitoring of the content of privileged communications, or work product, related to
+                personal representation or service by attorneys, psychotherapists, or clergy, and their assistants. Such
+                communications and work product are private and confidential. See User Agreement for details.</li>
+        </ul>
+        <p style="text-align:center;">To view Users Agreement click <a (click)="viewUserAgreement()" style="text-decoration:underline;">here</a></p>
+        <div style="width: 10%; margin: auto;">
+            <button mat-button style="border: 1px solid #999" (click)="accept()">Accept</button>
+        </div>
+    </div>
+    <div *ngIf="userAgreement" class="modal-header">
+        <h1>DOD INFORMATION SYSTEM USER AGREEMENTS</h1>
+    </div>
+    <div *ngIf="userAgreement" class="modal-body">
+        <h1>By signing this document, you acknowledge and consent that when you access Department of Defense (DoD)
+            information systems:
+        </h1>
+        <ul>
+            <li>You are accessing a U.S. Government (USG) information system (IS) (which includes any device attached to
+                this information system) that is provided for U.S. Government authorized use only.</li>
+
+            <li>You consent to the following conditions:</li>
+
+            <li style="margin-left: 2em;">The U.S. Government routinely intercepts and monitors communications on this
+                information system for
+                purposes including, but not limited to, penetration testing, communications security (COMSEC)
+                monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and
+                counterintelligence (CI) investigations.</li>
+
+            <li style="margin-left: 2em;">At any time, the U.S. Government may inspect and seize data stored on this
+                information system.</li>
+
+            <li style="margin-left: 2em;">Communications using, or data stored on, this information system are not
+                private, are subject to routine
+                monitoring, interception, and search, and may be disclosed or used for any U.S. Government-authorized
+                purpose.</li>
+
+            <li style="margin-left: 2em;">This information system includes security measures (e.g., authentication and
+                access controls) to protect U.S. Government interests--not for your personal benefit or privacy.</li>
+
+            <li style="margin-left: 2em;">Notwithstanding the above, using an information system does not constitute
+                consent to personnel misconduct, law enforcement, or counterintelligence investigative searching or
+                monitoring of the content of privileged communications or data (including work product) that are related
+                to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants.
+                Under these circumstances, such communications and work product are private and confidential, as further
+                explained below:</li>
+
+            <li style="margin-left: 4em;">Nothing in this User Agreement shall be interpreted to limit the user's
+                consent to, or in any other way restrict or affect, any U.S. Government actions for purposes of network
+                administration, operation, protection, or defense, or for communications security. This includes all
+                communications and data on an information system, regardless of any applicable privilege or
+                confidentiality.</li>
+            <li style="margin-left: 4em;">The user consents to interception/capture and seizure of ALL communications
+                and data for any authorized purpose (including personnel misconduct, law enforcement, or
+                counterintelligence investigation). However, consent to interception/capture or seizure of
+                communications and data is not consent to the use of privileged communications or data for personnel
+                misconduct, law enforcement, or counterintelligence investigation against any party and does not negate
+                any applicable privilege or confidentiality that otherwise applies.</li>
+            <li style="margin-left: 4em;">Whether any particular communication or data qualifies for the protection of
+                a privilege, or is covered by a duty of confidentiality, is determined in accordance with established
+                legal standards and DoD policy. Users are strongly encouraged to seek personal legal counsel on such
+                matters prior to using an information system if the user intends to rely on the protections of a
+                privilege or confidentiality.</li>
+            <li style="margin-left: 4em;">Users should take reasonable steps to identify such communications or data
+                that the user asserts are protected by any such privilege or confidentiality. However, the user's
+                identification or assertion of a privilege or confidentiality is not sufficient to create such
+                protection where none exists under established legal standards and DoD policy.</li>
+            <li style="margin-left: 4em;">A user's failure to take reasonable steps to identify such communications or
+                data as privileged or confidential does not waive the privilege or confidentiality if such protections
+                otherwise exist under established legal standards and DoD policy. However, in such cases the U.S.
+                Government is authorized to take reasonable actions to identify such communication or data as being
+                subject to a privilege or confidentiality, and such actions do not negate any applicable privilege or
+                confidentiality.</li>
+            <li style="margin-left: 4em;">These conditions preserve the confidentiality of the communication or data,
+                and the legal protections regarding the use and disclosure of privileged information, and thus such
+                communications and data are private and confidential. Further, the U.S. Government shall take all
+                reasonable measures to protect the content of captured/seized privileged communications and data to
+                ensure they are appropriately protected.</li>
+
+            <li style="margin-left: 2em;">In cases when the user has consented to content searching or monitoring of
+                communications or data for personnel misconduct, law enforcement, or counterintelligence investigative
+                searching, (Le., for all communications and data other than privileged communications or data that are
+                related to personal representation or services by attorneys, psychotherapists, or clergy, and their
+                assistants), the U.S. Government may, solely at its discretion and in accordance with DoD policy, elect
+                to apply a privilege or other restriction on the U.S. Government's otherwise-authorized use or
+                disclosure of such information.</li>
+
+            <li style="margin-left: 2em;">All of the above conditions apply regardless of whether the access or use of
+                an information system includes the display of a Notice and Consent Banner ("banner"). When a banner is
+                used, the banner functions to remind the user of the conditions that are set forth in this User
+                Agreement, regardless of whether the banner describes these conditions in full detail or provides a
+                summary of such conditions, and regardless of whether the banner expressly references this User
+                Agreement.</li>
+        </ul>
+        <div style="width: 10%; margin: auto;">
+            <button mat-button style="border: 1px solid #999" (click)="viewUserAgreement()">Back</button>
+        </div>
+    </div>
+</div>
